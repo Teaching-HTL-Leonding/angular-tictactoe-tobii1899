@@ -1,0 +1,15 @@
+h1 {
+  border-bottom: 1px solid black;
+  padding-bottom: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h3 {
+  border-top: 1px solid black;
+  padding-top: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

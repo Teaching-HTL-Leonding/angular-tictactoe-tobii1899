@@ -1,0 +1,23 @@
+<div>
+  <button (click)="resetGame()" style="display: flex; align-items: center; justify-content: center;">Reset</button>
+  <table>
+    <tbody>
+      <tr *ngFor="let row of [0, 1, 2]; let rowIndex = index">
+        <td *ngFor="let col of [0, 1, 2]; let colIndex = index"
+            style="width: 100px; height: 100px; border: 1px solid black; text-align: center; cursor: pointer;"
+            (click)="makeMove(rowIndex, colIndex)">
+          {{ board[rowIndex][colIndex] }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  @if (winners.length > 0) {
+    <h3>Winner</h3>
+    <ul>
+      @for(w of winners; track $index) {
+        <li>{{w}}</li>
+      }
+    </ul>
+  }
+</div>
